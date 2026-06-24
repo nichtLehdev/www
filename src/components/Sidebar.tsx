@@ -7,6 +7,7 @@ const SUBPAGES = [
   { href: '/software', label: 'Software' },
   { href: '/career', label: 'Career' },
   { href: '/biking', label: 'Biking' },
+  { href: '/biking/wm-challenge', label: 'WM Challenge', indent: true },
   { href: '/photography', label: 'Photography' },
   { href: '/trumpet', label: 'Trumpet' },
 ] as const
@@ -82,12 +83,14 @@ export default function Sidebar({
               </Link>
             </li>
             <hr className="my-4 border-slate-200 dark:border-slate-800/60" />
-            {SUBPAGES.map(({ href, label }) => (
+            {SUBPAGES.map(({ href, label, ...rest }) => (
               <li key={href}>
                 <Link
                   href={href}
                   onClick={onClose}
-                  className="block px-4 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/60 transition-colors"
+                  className={`block py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800/60 transition-colors ${
+                    'indent' in rest ? 'pl-8 pr-4 text-sm' : 'px-4'
+                  }`}
                 >
                   {label}
                 </Link>

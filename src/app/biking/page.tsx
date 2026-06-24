@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import SubpageLayout from '@/components/SubpageLayout'
 import BikeImage from '@/components/BikeImage'
 import { bikes, STRAVA_PROFILE_URL } from './bikes'
@@ -13,6 +14,21 @@ export default function BikingPage() {
         I&apos;ve been riding bikes my whole life and have been into road biking
         for about 5–6 years. I also enjoy a bit of mountain biking now and then.
       </p>
+
+      {/* WM Challenge link */}
+      <Link
+        href="/biking/wm-challenge"
+        className="mb-12 block overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-800/40 transition-colors hover:border-slate-400 dark:hover:border-slate-500"
+      >
+        <div className="p-4 md:p-5">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            WM Challenge 2026
+          </h2>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+            One World Cup. 38 match days. Every km counts.
+          </p>
+        </div>
+      </Link>
 
       {/* Strava link — embed removed: Strava widgets show 4EC / "content unavailable" since Jan 2026; re-add StravaEmbed when fixed */}
       <div className="mb-12">
@@ -103,7 +119,7 @@ function StravaIcon({ className }: { className?: string }) {
       fill="currentColor"
       aria-hidden
     >
-      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L2.463 0H0l5.379 10.345z" />
+      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
     </svg>
   )
 }
