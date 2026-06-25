@@ -14,7 +14,7 @@ export const spieltagXX: Spieltag = {
   isWalkConversion: false,
   target: 0,
   covered: 0,
-  status: 'done',          // 'done' | 'partial' | 'banked'
+  status: 'done',          // 'done' | 'partial' | 'banked' | 'pending'
   matches: [
     { homeTeam: '', homeFlag: '', awayTeam: '', awayFlag: '', homeScore: 0, awayScore: 0 },
   ],

@@ -5,6 +5,7 @@ import type { Spieltag, Match, StravaActivity } from './types'
 const totalTarget = spieltage.reduce((s, d) => s + d.target, 0)
 const totalCovered = spieltage.reduce((s, d) => s + d.covered, 0)
 const totalBanked = spieltage.reduce((s, d) => {
+  if (d.status === 'pending') return s
   const diff = d.target - d.covered
   return diff > 0 ? s + diff : s
 }, 0)
@@ -36,6 +37,11 @@ const STATUS_CONFIG: Record<Spieltag['status'], { label: string; banner: string;
     label: 'Banked',
     banner: 'bg-red-500 dark:bg-red-500',
     badge: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
+  },
+  pending: {
+    label: 'Pending',
+    banner: 'bg-blue-500 dark:bg-blue-500',
+    badge: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
   },
 }
 

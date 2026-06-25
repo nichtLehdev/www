@@ -38,7 +38,7 @@ interface SpieltagData {
   isWalkConversion: boolean
   target: number
   covered: number
-  status: 'done' | 'partial' | 'banked'
+  status: 'done' | 'partial' | 'banked' | 'pending'
   matches: {
     homeTeam: string
     homeFlag: string
@@ -162,7 +162,7 @@ const SpieltagSchema = z.object({
   isWalkConversion: z.boolean(),
   target: z.number(),
   covered: z.number(),
-  status: z.enum(['done', 'partial', 'banked']),
+  status: z.enum(['done', 'partial', 'banked', 'pending']),
   matches: z.array(MatchSchema).min(1),
   strava: z.array(StravaSchema),
   note: z.string().optional(),

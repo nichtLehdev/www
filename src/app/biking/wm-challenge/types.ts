@@ -7,7 +7,7 @@ export interface Match {
   awayScore: number
 }
 
-export type SpieltagStatus = 'done' | 'partial' | 'banked'
+export type SpieltagStatus = 'done' | 'partial' | 'banked' | 'pending'
 export type ActivityType = 'bike' | 'walk'
 
 export interface StravaActivity {
