@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { execSync } from 'child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PROJECT_ROOT = join(__dirname, '../..')
@@ -133,6 +134,20 @@ ${entries}
   writeFileSync(INDEX_FILE, content, 'utf-8')
 }
 
+function gitCommitAndPush(spieltagId: number, isNew: boolean): string {
+  const action = isNew ? 'add' : 'update'
+  const msg = `${action} spieltag ${spieltagId}`
+  try {
+    execSync('git add src/app/biking/wm-challenge/spieltage/', { cwd: PROJECT_ROOT, stdio: 'pipe' })
+    execSync(`git commit -m "${msg}"`, { cwd: PROJECT_ROOT, stdio: 'pipe' })
+    execSync('git push', { cwd: PROJECT_ROOT, stdio: 'pipe' })
+    return `Committed and pushed: "${msg}"`
+  } catch (e) {
+    const err = e as Error & { stderr?: Buffer }
+    return `Git error: ${err.stderr?.toString() ?? err.message}`
+  }
+}
+
 // ── zod schemas ──────────────────────────────
 
 const MatchSchema = z.object({
@@ -235,7 +250,7 @@ server.tool(
 
 server.tool(
   'save_spieltag',
-  'Create or update a Spieltag file. Provide the full Spieltag data. Automatically updates the index.',
+  'Create or update a Spieltag file. Provide the full Spieltag data. Automatically updates the index, commits, and pushes.',
   SpieltagSchema.shape,
   async (data) => {
     const filePath = join(SPIELTAGE_DIR, `spieltag-${pad(data.id)}.ts`)
@@ -244,11 +259,13 @@ server.tool(
     writeFileSync(filePath, fileContent, 'utf-8')
     regenerateIndex()
 
+    const gitResult = gitCommitAndPush(data.id, isNew)
+
     return {
       content: [
         {
           type: 'text' as const,
-          text: `Spieltag ${data.id} ${isNew ? 'created' : 'updated'} at spieltag-${pad(data.id)}.ts. Index regenerated.`,
+          text: `Spieltag ${data.id} ${isNew ? 'created' : 'updated'} at spieltag-${pad(data.id)}.ts. Index regenerated.\n${gitResult}`,
         },
       ],
     }
