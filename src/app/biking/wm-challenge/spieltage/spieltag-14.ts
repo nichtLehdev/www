@@ -8,7 +8,7 @@ export const spieltag14: Spieltag = {
   isWalkConversion: false,
   target: 147,
   covered: 0,
-  status: 'banked',
+  status: 'pending',
   matches: [
     { homeTeam: 'Mexico', homeFlag: '🇲🇽', awayTeam: 'Czechia', awayFlag: '🇨🇿', homeScore: 3, awayScore: 0 },
     { homeTeam: 'South Africa', homeFlag: '🇿🇦', awayTeam: 'South Korea', awayFlag: '🇰🇷', homeScore: 1, awayScore: 0 },
