@@ -6,19 +6,19 @@ export const spieltag17: Spieltag = {
   basedOn: 'June 27 results',
   type: 'bike',
   isWalkConversion: false,
-  target: 136,
+  target: 100,
   covered: 0,
   status: 'pending',
   matches: [
-    { homeTeam: 'Argentina', homeFlag: '🇦🇷', awayTeam: 'Jordan', awayFlag: '🇯🇴', homeScore: 3, awayScore: 1 },
-    { homeTeam: 'Austria', homeFlag: '🇦🇹', awayTeam: 'Algeria', awayFlag: '🇩🇿', homeScore: 3, awayScore: 3 },
+    { homeTeam: 'Panama', homeFlag: '🇵🇦', awayTeam: 'England', awayFlag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', homeScore: 0, awayScore: 2 },
+    { homeTeam: 'Croatia', homeFlag: '🇭🇷', awayTeam: 'Ghana', awayFlag: '🇬🇭', homeScore: 2, awayScore: 1 },
     { homeTeam: 'Colombia', homeFlag: '🇨🇴', awayTeam: 'Portugal', awayFlag: '🇵🇹', homeScore: 0, awayScore: 0 },
     { homeTeam: 'DR Congo', homeFlag: '🇨🇩', awayTeam: 'Uzbekistan', awayFlag: '🇺🇿', homeScore: 3, awayScore: 1 },
-    { homeTeam: 'England', homeFlag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', awayTeam: 'Panama', awayFlag: '🇵🇦', homeScore: 2, awayScore: 0 },
-    { homeTeam: 'Croatia', homeFlag: '🇭🇷', awayTeam: 'Ghana', awayFlag: '🇬🇭', homeScore: 2, awayScore: 1 },
+    { homeTeam: 'Algeria', homeFlag: '🇩🇿', awayTeam: 'Austria', awayFlag: '🇦🇹', homeScore: 3, awayScore: 3 },
+    { homeTeam: 'Jordan', homeFlag: '🇯🇴', awayTeam: 'Argentina', awayFlag: '🇦🇷', homeScore: 1, awayScore: 3 },
   ],
   strava: [
 
   ],
-  note: 'Last day of group stage! Austria 3:3 Algeria thriller. Round of 32 starts tomorrow.',
+  note: 'Final day of group stage. Algeria 3:3 Austria thriller. Round of 32 starts tomorrow.',
 }
