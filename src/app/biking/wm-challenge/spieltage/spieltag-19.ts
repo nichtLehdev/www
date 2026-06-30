@@ -7,15 +7,15 @@ export const spieltag19: Spieltag = {
   type: 'bike',
   isWalkConversion: false,
   target: 43,
-  covered: 0,
-  status: 'pending',
+  covered: 47,
+  status: 'done',
   matches: [
     { homeTeam: 'Brazil', homeFlag: '🇧🇷', awayTeam: 'Japan', awayFlag: '🇯🇵', homeScore: 2, awayScore: 1 },
     { homeTeam: 'Germany', homeFlag: '🇩🇪', awayTeam: 'Paraguay', awayFlag: '🇵🇾', homeScore: 1, awayScore: 1 },
     { homeTeam: 'Netherlands', homeFlag: '🇳🇱', awayTeam: 'Morocco', awayFlag: '🇲🇦', homeScore: 1, awayScore: 1 },
   ],
   strava: [
-
+    { title: 'WM Challenge Gameday 19', km: 47, elevation: 363, kcal: 1332, prs: 40, note: '27.6-28.7°C', url: 'https://www.strava.com/activities/19126792652' },
   ],
-  note: 'Result after extra time, excluding penalty shootout goals. Paraguay (4-3 pens) and Morocco (3-2 pens) won on penalties \\u2014 biggest upsets so far.',
+  note: 'Berg runter macht halt einfach Spa\\u00df. Result after extra time, excl. penalties.',
 }
