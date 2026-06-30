@@ -7,13 +7,13 @@ export const spieltag18: Spieltag = {
   type: 'walk',
   isWalkConversion: false,
   target: 1,
-  covered: 0,
-  status: 'pending',
+  covered: 1.57,
+  status: 'done',
   matches: [
     { homeTeam: 'South Africa', homeFlag: '🇿🇦', awayTeam: 'Canada', awayFlag: '🇨🇦', homeScore: 0, awayScore: 1 },
   ],
   strava: [
-
+    { title: 'WM Challenge Gameday 18', km: 1.57, kcal: 141, note: 'Pre-Game Abkühlrunde & Streak-Saver', url: 'https://www.strava.com/activities/19115315166' },
   ],
-  note: 'Only 1 match on June 28 — first Round of 32 game in World Cup history. Target: 1 km walk.',
+  note: 'Pre-Game Abk\\u00fchlrunde &amp; Streak-Saver. Only 1 match \\u2014 first Round of 32 game ever.',
 }
