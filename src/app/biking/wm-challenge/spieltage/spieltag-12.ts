@@ -7,7 +7,7 @@ export const spieltag12: Spieltag = {
   type: 'bike',
   isWalkConversion: false,
   target: 94,
-  covered: 54,
+  covered: 66,
   status: 'partial',
   matches: [
     { homeTeam: 'Argentina', homeFlag: '🇦🇷', awayTeam: 'Austria', awayFlag: '🇦🇹', homeScore: 2, awayScore: 0 },
@@ -17,6 +17,8 @@ export const spieltag12: Spieltag = {
   ],
   strava: [
     { title: 'WM Challenge Gameday 12.1', km: 54, elevation: 294, kcal: 1484, prs: 44, note: '33°C. France + Jordan banked.', url: 'https://www.strava.com/activities/19038140686' },
+    { title: 'Zum Bahnhof', km: 10.5, elevation: 41, kcal: 275, prs: 2, note: 'Zum Bahnhof — clears Jordan 12km debt', url: 'https://www.strava.com/activities/19163063646' },
+    { title: 'Afternoon Ride', km: 1.5, elevation: 6, kcal: 32, prs: 0, note: 'Afternoon Ride — remainder', url: 'https://www.strava.com/activities/19166718275' },
   ],
-  note: 'France 30km + Jordan 12km banked',
+  note: 'France 30km still banked. Jordan 12km cleared via Zum Bahnhof (10.5km) + Afternoon Ride (1.5km) on Jul 3.',
 }
