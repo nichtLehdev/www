@@ -22,6 +22,7 @@ import { spieltag21 } from './spieltag-21'
 import { spieltag22 } from './spieltag-22'
 import { spieltag23 } from './spieltag-23'
 import { spieltag24 } from './spieltag-24'
+import { spieltag25 } from './spieltag-25'
 import type { Spieltag } from '../types'
 
 export const spieltage: Spieltag[] = [
@@ -49,4 +50,5 @@ export const spieltage: Spieltag[] = [
   spieltag22,
   spieltag23,
   spieltag24,
+  spieltag25,
 ]
